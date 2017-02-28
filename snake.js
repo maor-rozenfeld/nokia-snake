@@ -40,7 +40,7 @@ var snake = function() {
 							container.empty().show();							
 							$(".points").hide();
 							snake();
-						}, 1600); 		
+						}, 1800); 		
 					}, 900);
 					return;
 			}

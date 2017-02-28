@@ -35,8 +35,7 @@
 }
 
 .points {
-	margin:auto; margin-top: 100px;	
+	margin:auto; font-size: 62px; font-family: FANTASY;
 }
-.points .text { font-size: 24px; font-family: Arial; margin: auto; }
 
 .hidden { display: none; }
