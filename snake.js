@@ -1,4 +1,4 @@
-$(function() {
+var snake = function() {
 		var width = 23;
 		var height = 16;
 		var blocksAmount = width * height;
@@ -33,11 +33,15 @@ $(function() {
 			if (isCollision(nextHeadPos)) {
 					clearInterval(runInterval);
 					setTimeout(function() {
-						$(".snake").hide();
+						container.hide();
 						$(".points .text").text(points);
 						$(".points").show();
-						setTimeout(function() { location.reload(); }, 1200); 		
-					}, 700);
+						setTimeout(function() { 
+							container.empty().show();							
+							$(".points").hide();
+							snake();
+						}, 1600); 		
+					}, 900);
 					return;
 			}
 
@@ -152,4 +156,5 @@ $(function() {
 
 			direction = dirCommand;
 		}  
-});        
+};
+$(snake);        

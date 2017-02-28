@@ -6,11 +6,10 @@
 } 
 
 .screen {
-	margin: auto; margin-top: 200px;
+	margin: auto; margin-top: 200px; opacity: 0.6;
 	width: 347px; height: 247px; overflow:hidden;
 }
-.snake {
-	
+.snake {	
 	/*background-color: #B9C501;*/
 	border: 1px solid black;
 }
