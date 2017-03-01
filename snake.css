@@ -3,13 +3,13 @@
 	background-image: url('nokia.jpg');
 	background-position: -195px -508px;
 	background-repeat: no-repeat;
-} 
+}
 
 .screen {
 	margin: auto; margin-top: 200px; opacity: 0.6;
 	width: 347px; height: 247px; overflow:hidden;
 }
-.snake {	
+.snake {
 	/*background-color: #B9C501;*/
 	border: 1px solid black;
 }
@@ -35,7 +35,7 @@
 }
 
 .points {
-	margin:auto; font-size: 62px; font-family: FANTASY;
+	margin:auto; font-size: 62px; font-family: Impact; font-weight: bold;
 }
 
 .hidden { display: none; }
