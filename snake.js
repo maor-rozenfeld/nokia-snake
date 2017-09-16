@@ -13,7 +13,7 @@ var snake = function() {
         }
 		var blocks = $(".block");
 		var direction = 1;
-		var difficulty = parseInt(location.hash.substring(1)) || 50;
+		var difficulty = parseInt(location.hash.substring(1)) || 80;
 		var snakeSize = 4;
 		var snakeBody = new Array({ x:2, y:5});
 		var commands = new Array();
