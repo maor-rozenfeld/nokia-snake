@@ -10,7 +10,8 @@ var snake = function() {
 
 		for (var i = 1; i <= blocksAmount; i++) {
 			container.append('<div class="block">');
-        }
+        	}
+	
 		var blocks = $(".block");
 		var direction = 1;
 		var difficulty = parseInt(location.hash.substring(1)) || 80;
@@ -25,6 +26,7 @@ var snake = function() {
 
 
 		bindKeys();
+	
 		function run() {
 			doDirectionCommand()
 			var headPos = snakeBody[snakeBody.length -1];
@@ -55,13 +57,10 @@ var snake = function() {
 			getBlock(nextHeadPos).addClass("snake-body");
 
 			snakeBody.push(nextHeadPos);
-			//console.log(snakeBody.length);
 			if (snakeBody.length > snakeSize) {
 				var tail = snakeBody.shift();
 				if (tail.x != nextHeadPos.x || tail.y != nextHeadPos.y)
 					getBlock(tail).removeClass("snake-body");
-				//getBlock(tail).css("background-color", "red");
-				//console.log(tail, nextHeadPos);
 			}
 
 
@@ -104,11 +103,6 @@ var snake = function() {
 				case 3: pos.x--; break;
 			}
 
-			/*if (pos.x >= width) pos.x = 0;
-			if (pos.x < 0) pos.x = width - 1;
-			if (pos.y >= height) pos.y = 0;
-			if (pos.y < 0) pos.y = height - 1;
-			*/
 			return pos;
 		}
 
@@ -131,7 +125,7 @@ var snake = function() {
 		function bindKeys() {
 			$(document).keydown(function(e) {
 				switch(e.which) {
-					case 37: commands.push(3); break;//left
+					case 37: commands.push(3); break;
 					case 38: commands.push(0); break;
 					case 39: commands.push(1); break;
 					case 40: commands.push(2); break;
